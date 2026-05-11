@@ -1,0 +1,67 @@
+aid: facebook-pages
+name: Facebook Pages API
+description: >-
+  The Facebook Pages API is part of the Meta Graph API and allows applications
+  to manage Facebook Pages, including posting content, reading insights,
+  moderating comments, managing tabs and settings, and receiving real-time
+  webhook updates for Page events. Access is granted via OAuth 2.0 Page access
+  tokens with permission scopes such as pages_manage_posts, pages_read_engagement,
+  and pages_messaging.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Social Media
+  - Facebook
+  - Meta Graph API
+  - Pages
+  - Content Publishing
+  - Social Insights
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/facebook-pages/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: facebook-pages:graph-pages-api
+    name: Meta Graph API - Pages
+    description: >-
+      Graph API endpoints for reading and managing Facebook Pages, including
+      publishing posts and stories, retrieving Page insights, managing
+      comments and conversations, and configuring Page metadata. Authenticated
+      via OAuth 2.0 Page access tokens scoped to specific Page permissions.
+    humanURL: https://developers.facebook.com/docs/pages-api
+    baseURL: https://graph.facebook.com
+    tags:
+      - Social Media
+      - Facebook
+      - Pages
+      - Content Publishing
+      - Webhooks
+    properties:
+      - type: Documentation
+        url: https://developers.facebook.com/docs/pages-api
+      - type: Getting Started
+        url: https://developers.facebook.com/docs/pages-api/getting-started
+      - type: Authentication
+        url: https://developers.facebook.com/docs/facebook-login/guides/access-tokens/get-page
+      - type: Permissions
+        url: https://developers.facebook.com/docs/permissions
+      - type: Webhooks
+        url: https://developers.facebook.com/docs/graph-api/webhooks
+
+common:
+  - type: Website
+    url: https://developers.facebook.com
+  - type: Documentation
+    url: https://developers.facebook.com/docs/pages-api
+  - type: Pricing
+    url: https://developers.facebook.com/docs/graph-api/overview/rate-limiting
+  - type: Sign Up
+    url: https://developers.facebook.com/async/registration
+  - type: App Dashboard
+    url: https://developers.facebook.com/apps
+  - type: Support
+    url: https://developers.facebook.com/support
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
