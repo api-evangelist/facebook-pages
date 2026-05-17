@@ -40,7 +40,7 @@ apis:
     properties:
       - type: Documentation
         url: https://developers.facebook.com/docs/pages-api
-      - type: Getting Started
+      - type: GettingStarted
         url: https://developers.facebook.com/docs/pages-api/getting-started
       - type: Authentication
         url: https://developers.facebook.com/docs/facebook-login/guides/access-tokens/get-page
@@ -56,7 +56,7 @@ common:
     url: https://developers.facebook.com/docs/pages-api
   - type: Pricing
     url: https://developers.facebook.com/docs/graph-api/overview/rate-limiting
-  - type: Sign Up
+  - type: SignUp
     url: https://developers.facebook.com/async/registration
   - type: App Dashboard
     url: https://developers.facebook.com/apps
