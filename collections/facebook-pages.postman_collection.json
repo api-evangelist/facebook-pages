@@ -1,0 +1,1869 @@
+{
+  "item": [
+    {
+      "id": "ced571ce-cfee-4753-8898-43cabec04670",
+      "name": "Get Page metadata",
+      "request": {
+        "name": "Get Page metadata",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "fields",
+              "value": "<string>",
+              "description": "Comma-separated list of fields to return."
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "c3dd9e27-2ffc-4539-b3f5-525011191775",
+          "name": "Page object",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"about\": \"string\",\n  \"category\": \"string\",\n  \"fan_count\": 8244,\n  \"link\": \"http://fvZGkVJWzJMLIvCYFfxvAVZHLmgH.cpA,aGiUbhez0n7JQ9xylblNudkD-Y3d0Oc4SGc461GZAKnY3NAJ5BQU14VHL3.sS7x0Lw5jt9MFovG\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "3adbbc0f-b99f-47f2-96e5-012a0156b3d6",
+      "name": "Update Page settings or metadata",
+      "request": {
+        "name": "Update Page settings or metadata",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"about\": \"<string>\",\n  \"description\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"website\": \"<string>\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "6027b51c-2182-4bbb-8cff-afdc7cd6d29d",
+          "name": "Update confirmation",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"about\": \"<string>\",\n  \"description\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"website\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "e8ef44fc-2d33-4e42-8e22-79013b223c75",
+      "name": "List Page feed posts",
+      "request": {
+        "name": "List Page feed posts",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "feed"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "fields",
+              "value": "<string>",
+              "description": "Comma-separated list of fields to return."
+            },
+            {
+              "disabled": false,
+              "key": "limit",
+              "value": "25",
+              "description": "Number of items per page."
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "2e9cdd76-65e8-41fe-bbd8-c2980f61c858",
+          "name": "Feed collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "feed"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "key": "limit",
+                  "value": "25"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"paging\": {\n    \"cursors\": {\n      \"before\": \"string\",\n      \"after\": \"string\"\n    },\n    \"next\": \"string\",\n    \"previous\": \"string\"\n  }\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "e2a9cd44-322a-4373-9bad-e1b622ac1825",
+      "name": "Publish a post to the Page feed",
+      "request": {
+        "name": "Publish a post to the Page feed",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "feed"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"<string>\",\n  \"link\": \"<uri>\",\n  \"published\": \"<boolean>\",\n  \"scheduled_publish_time\": \"<integer>\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "281c07d9-fe5e-4252-9f38-7f38695c5388",
+          "name": "Post created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "feed"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message\": \"<string>\",\n  \"link\": \"<uri>\",\n  \"published\": \"<boolean>\",\n  \"scheduled_publish_time\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"id\": \"string\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "01047b06-b6ef-4163-9106-b3b76ba27004",
+      "name": "List posts published by the Page",
+      "request": {
+        "name": "List posts published by the Page",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "posts"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "fields",
+              "value": "<string>",
+              "description": "Comma-separated list of fields to return."
+            },
+            {
+              "disabled": false,
+              "key": "limit",
+              "value": "25",
+              "description": "Number of items per page."
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "aaf3df10-b500-4721-9cdf-f5d0117c0d21",
+          "name": "Posts collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "posts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "key": "limit",
+                  "value": "25"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "3e5106ae-2615-4f93-8876-e6b1845a7460",
+      "name": "List Page photos",
+      "request": {
+        "name": "List Page photos",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "photos"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "b7ae0e32-6da3-47e8-9661-62fb09a67250",
+          "name": "Photos collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "photos"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "23d5f135-700f-46d8-b437-d50812fdcdc8",
+      "name": "Upload a Page photo",
+      "request": {
+        "name": "Upload a Page photo",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "photos"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "multipart/form-data"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "source",
+              "type": "file",
+              "description": ""
+            },
+            {
+              "key": "url",
+              "value": "<uri>",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "caption",
+              "value": "<string>",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "published",
+              "value": "<boolean>",
+              "type": "text",
+              "description": ""
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "1096c0d9-f3c7-45a0-b6ba-0e8d1b804d9f",
+          "name": "Photo uploaded",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "photos"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "source",
+                  "value": "<binary>",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "url",
+                  "value": "<uri>",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "caption",
+                  "value": "<string>",
+                  "type": "text"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "published",
+                  "value": "<boolean>",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a1912268-20e8-4e50-95e5-414dd48f9efb",
+      "name": "Get Page insights metrics",
+      "request": {
+        "name": "Get Page insights metrics",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "insights"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "metric",
+              "value": "<string>",
+              "description": "(Required) Comma-separated metric names, e.g. page_impressions,page_fans"
+            },
+            {
+              "disabled": false,
+              "key": "period",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "since",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "until",
+              "value": "<string>"
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "c7a92be3-edcb-485d-bc14-8b7c7be66f1e",
+          "name": "Insights values",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "insights"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "metric",
+                  "value": "<string>"
+                },
+                {
+                  "key": "period",
+                  "value": "<string>"
+                },
+                {
+                  "key": "since",
+                  "value": "<string>"
+                },
+                {
+                  "key": "until",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "175c4b7e-d86a-42a6-b647-4328fb903278",
+      "name": "List Page Messenger conversations",
+      "request": {
+        "name": "List Page Messenger conversations",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "conversations"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "fields",
+              "value": "<string>",
+              "description": "Comma-separated list of fields to return."
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "9e42ce36-811b-4b26-9f31-a3d73bdf07be",
+          "name": "Conversation collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "conversations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "bc43b2f0-4d2a-458d-8fb0-48297179d28b",
+      "name": "List posts the Page is tagged in",
+      "request": {
+        "name": "List posts the Page is tagged in",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "tagged"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "eabcc361-3f90-48d7-a5ce-5bdf6ec38124",
+          "name": "Tagged posts",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "tagged"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "f605e635-239e-46c8-adcb-d6e8c13d871d",
+      "name": "Get Page settings",
+      "request": {
+        "name": "Get Page settings",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "settings"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "d2f42b10-e397-445f-9da8-fe49b659f5b0",
+          "name": "Settings",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "settings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c90520ad-b17e-466b-9635-462720775542",
+      "name": "Update a Page setting",
+      "request": {
+        "name": "Update a Page setting",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "settings"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"setting\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "0e0b811f-5824-4259-8ad9-5472ba607a4f",
+          "name": "Setting updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "settings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"setting\": \"<string>\",\n  \"value\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7cd922ad-ddad-4dfb-bdd5-fe4a0c36e2b6",
+      "name": "List comments on an object",
+      "request": {
+        "name": "List comments on an object",
+        "description": {},
+        "url": {
+          "path": [
+            ":object-id",
+            "comments"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "fields",
+              "value": "<string>",
+              "description": "Comma-separated list of fields to return."
+            }
+          ],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "object-id",
+              "description": "(Required) Post, photo, or other commentable object ID."
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "5403cf72-0dc0-40e5-a816-5eb0ae04cfa4",
+          "name": "Comment collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":object-id",
+                "comments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "object-id",
+                  "description": "(Required) Post, photo, or other commentable object ID."
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "65a04aab-6d2b-4876-afad-0d90776dc2e0",
+      "name": "Post a comment on an object",
+      "request": {
+        "name": "Post a comment on an object",
+        "description": {},
+        "url": {
+          "path": [
+            ":object-id",
+            "comments"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "object-id",
+              "description": "(Required) Post, photo, or other commentable object ID."
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"<string>\",\n  \"attachment_url\": \"<uri>\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "8e7a3705-39c0-47bb-b655-313dc6c9e244",
+          "name": "Comment created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":object-id",
+                "comments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "object-id",
+                  "description": "(Required) Post, photo, or other commentable object ID."
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message\": \"<string>\",\n  \"attachment_url\": \"<uri>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a0a80898-6f35-49b3-88ca-4918f9477d60",
+      "name": "Delete a comment",
+      "request": {
+        "name": "Delete a comment",
+        "description": {},
+        "url": {
+          "path": [
+            ":comment-id"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "comment-id",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "b9a46f2e-0a44-4d32-8e44-1a31ac59c641",
+          "name": "Deleted",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":comment-id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "comment-id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "5f3163c4-d1be-4de7-ab26-3d6ea25481ae",
+      "name": "List apps subscribed to the Page",
+      "request": {
+        "name": "List apps subscribed to the Page",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "subscribed_apps"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "7bd1a545-ac2e-4214-adf7-6efc60adae90",
+          "name": "Subscribed apps",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "subscribed_apps"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "393d7050-7ed3-4c1f-8f42-819ab6bfd328",
+      "name": "Subscribe an app to Page webhook events",
+      "request": {
+        "name": "Subscribe an app to Page webhook events",
+        "description": {},
+        "url": {
+          "path": [
+            ":page-id",
+            "subscribed_apps"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "page-id",
+              "description": "(Required) Facebook Page ID"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "subscribed_fields",
+              "value": "<string>",
+              "description": "Comma-separated event fields, e.g. feed,messages,mention."
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "81807510-9dc2-4dee-b8b6-1874e689b174",
+          "name": "Subscription created",
+          "originalRequest": {
+            "url": {
+              "path": [
+                ":page-id",
+                "subscribed_apps"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "Comma-separated event fields, e.g. feed,messages,mention.",
+                    "type": "text/plain"
+                  },
+                  "key": "subscribed_fields",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "ee4cfd9e-534d-49c4-833b-6e3b6aba8ea5",
+      "name": "List Pages the user manages",
+      "request": {
+        "name": "List Pages the user manages",
+        "description": {},
+        "url": {
+          "path": [
+            "me",
+            "accounts"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "fields",
+              "value": "<string>",
+              "description": "Comma-separated list of fields to return."
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "65ff6e61-be8a-4457-a76e-990e87e9292e",
+          "name": "Pages the authenticated user manages",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "me",
+                "accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "fields",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: oauth2",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "<token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://graph.facebook.com/v22.0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "pages_show_list pages_manage_posts pages_read_engagement pages_manage_metadata pages_messaging pages_read_user_content pages_manage_engagement"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://graph.facebook.com/v22.0/oauth/access_token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://www.facebook.com/v22.0/dialog/oauth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "14c440da-c0c7-4d9e-8cc6-5f6d47b2915f",
+    "name": "Meta Graph API - Pages",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Graph API endpoints for reading and managing Facebook Pages -\npublishing posts and photos, retrieving Page insights, moderating\ncomments, configuring Page metadata, and subscribing to webhook\nevents. Authentication uses a Page access token obtained via OAuth\n2.0 with scopes such as pages_manage_posts, pages_read_engagement,\npages_manage_metadata, pages_messaging, and pages_show_list.\n\n\nContact Support:\n Name: Meta for Developers",
+      "type": "text/plain"
+    }
+  }
+}

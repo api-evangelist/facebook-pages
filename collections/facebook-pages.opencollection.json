@@ -1,0 +1,476 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Meta Graph API - Pages",
+    "version": "v22.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://www.facebook.com/v22.0/dialog/oauth",
+      "accessTokenUrl": "https://graph.facebook.com/v22.0/oauth/access_token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Page metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v22.0/:page-id",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          },
+          {
+            "name": "fields",
+            "value": "",
+            "type": "query",
+            "description": "Comma-separated list of fields to return."
+          }
+        ]
+      },
+      "docs": "Get Page metadata"
+    },
+    {
+      "info": {
+        "name": "Update Page settings or metadata",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v22.0/:page-id",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update Page settings or metadata"
+    },
+    {
+      "info": {
+        "name": "List Page feed posts",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v22.0/:page-id/feed",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          },
+          {
+            "name": "fields",
+            "value": "",
+            "type": "query",
+            "description": "Comma-separated list of fields to return."
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query",
+            "description": "Number of items per page."
+          }
+        ]
+      },
+      "docs": "List Page feed posts"
+    },
+    {
+      "info": {
+        "name": "Publish a post to the Page feed",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v22.0/:page-id/feed",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Publish a post to the Page feed"
+    },
+    {
+      "info": {
+        "name": "List posts published by the Page",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v22.0/:page-id/posts",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          },
+          {
+            "name": "fields",
+            "value": "",
+            "type": "query",
+            "description": "Comma-separated list of fields to return."
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query",
+            "description": "Number of items per page."
+          }
+        ]
+      },
+      "docs": "List posts published by the Page"
+    },
+    {
+      "info": {
+        "name": "List Page photos",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v22.0/:page-id/photos",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          }
+        ]
+      },
+      "docs": "List Page photos"
+    },
+    {
+      "info": {
+        "name": "Upload a Page photo",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v22.0/:page-id/photos",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          }
+        ],
+        "body": {
+          "type": "multipart-form",
+          "data": [
+            {
+              "name": "source",
+              "type": "text",
+              "value": ""
+            },
+            {
+              "name": "url",
+              "type": "text",
+              "value": ""
+            },
+            {
+              "name": "caption",
+              "type": "text",
+              "value": ""
+            },
+            {
+              "name": "published",
+              "type": "text",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "docs": "Upload a Page photo"
+    },
+    {
+      "info": {
+        "name": "Get Page insights metrics",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v22.0/:page-id/insights",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          },
+          {
+            "name": "metric",
+            "value": "",
+            "type": "query",
+            "description": "Comma-separated metric names, e.g. page_impressions,page_fans"
+          },
+          {
+            "name": "period",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "since",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "until",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Get Page insights metrics"
+    },
+    {
+      "info": {
+        "name": "List Page Messenger conversations",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v22.0/:page-id/conversations",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          },
+          {
+            "name": "fields",
+            "value": "",
+            "type": "query",
+            "description": "Comma-separated list of fields to return."
+          }
+        ]
+      },
+      "docs": "List Page Messenger conversations"
+    },
+    {
+      "info": {
+        "name": "List posts the Page is tagged in",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v22.0/:page-id/tagged",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          }
+        ]
+      },
+      "docs": "List posts the Page is tagged in"
+    },
+    {
+      "info": {
+        "name": "Get Page settings",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v22.0/:page-id/settings",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          }
+        ]
+      },
+      "docs": "Get Page settings"
+    },
+    {
+      "info": {
+        "name": "Update a Page setting",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v22.0/:page-id/settings",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update a Page setting"
+    },
+    {
+      "info": {
+        "name": "List comments on an object",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v22.0/:object-id/comments",
+        "params": [
+          {
+            "name": "object-id",
+            "value": "",
+            "type": "path",
+            "description": "Post, photo, or other commentable object ID."
+          },
+          {
+            "name": "fields",
+            "value": "",
+            "type": "query",
+            "description": "Comma-separated list of fields to return."
+          }
+        ]
+      },
+      "docs": "List comments on an object"
+    },
+    {
+      "info": {
+        "name": "Post a comment on an object",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v22.0/:object-id/comments",
+        "params": [
+          {
+            "name": "object-id",
+            "value": "",
+            "type": "path",
+            "description": "Post, photo, or other commentable object ID."
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Post a comment on an object"
+    },
+    {
+      "info": {
+        "name": "Delete a comment",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://graph.facebook.com/v22.0/:comment-id",
+        "params": [
+          {
+            "name": "comment-id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a comment"
+    },
+    {
+      "info": {
+        "name": "List apps subscribed to the Page",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v22.0/:page-id/subscribed_apps",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          }
+        ]
+      },
+      "docs": "List apps subscribed to the Page"
+    },
+    {
+      "info": {
+        "name": "Subscribe an app to Page webhook events",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://graph.facebook.com/v22.0/:page-id/subscribed_apps",
+        "params": [
+          {
+            "name": "page-id",
+            "value": "",
+            "type": "path",
+            "description": "Facebook Page ID"
+          }
+        ],
+        "body": {
+          "type": "form-urlencoded",
+          "data": [
+            {
+              "name": "subscribed_fields",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "docs": "Subscribe an app to Page webhook events"
+    },
+    {
+      "info": {
+        "name": "List Pages the user manages",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v22.0/me/accounts",
+        "params": [
+          {
+            "name": "fields",
+            "value": "",
+            "type": "query",
+            "description": "Comma-separated list of fields to return."
+          }
+        ]
+      },
+      "docs": "List Pages the user manages"
+    }
+  ],
+  "bundled": true
+}
