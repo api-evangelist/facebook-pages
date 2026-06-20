@@ -8,7 +8,7 @@ description: >-
   tokens with permission scopes such as pages_manage_posts, pages_read_engagement,
   and pages_messaging.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Social Media
   - Facebook
