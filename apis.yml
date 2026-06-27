@@ -56,13 +56,13 @@ common:
     url: https://developers.facebook.com/docs/pages-api
   - type: Pricing
     url: https://developers.facebook.com/docs/graph-api/overview/rate-limiting
-  - type: SignUp
+  - type: Signup
     url: https://developers.facebook.com/async/registration
   - type: App Dashboard
     url: https://developers.facebook.com/apps
   - type: Support
     url: https://developers.facebook.com/support
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://developers.facebook.com/llms.txt
 maintainers:
   - FN: Kin Lane
