@@ -50,6 +50,8 @@ apis:
         url: https://developers.facebook.com/docs/graph-api/webhooks
 
 common:
+  - type: OAuthScopes
+    url: scopes/facebook-pages-scopes.yml
   - type: Website
     url: https://developers.facebook.com
   - type: Documentation
@@ -64,6 +66,8 @@ common:
     url: https://developers.facebook.com/support
   - type: LlmsText
     url: https://developers.facebook.com/llms.txt
+  - url: https://developers.facebook.com/blog/
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

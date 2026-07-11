@@ -1,0 +1,57 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/facebook-pages-openapi.yml
+schemes:
+- name: PageAccessToken
+  source: openapi/facebook-pages-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://www.facebook.com/v22.0/dialog/oauth
+    tokenUrl: https://graph.facebook.com/v22.0/oauth/access_token
+  description: |-
+    OAuth 2.0 Page access token. Granted scopes determine which
+    endpoints can be called. Send as a Bearer token or as the
+    access_token query parameter.
+scopes:
+- scope: pages_manage_engagement
+  description: Moderate comments and reactions
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/facebook-pages-openapi.yml
+- scope: pages_manage_metadata
+  description: Manage Page settings and subscribed apps
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/facebook-pages-openapi.yml
+- scope: pages_manage_posts
+  description: Publish and edit posts
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/facebook-pages-openapi.yml
+- scope: pages_messaging
+  description: Send and receive Messenger messages
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/facebook-pages-openapi.yml
+- scope: pages_read_engagement
+  description: Read Page content and engagement
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/facebook-pages-openapi.yml
+- scope: pages_read_user_content
+  description: Read user-generated content on a Page
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/facebook-pages-openapi.yml
+- scope: pages_show_list
+  description: List Pages the user manages
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/facebook-pages-openapi.yml
