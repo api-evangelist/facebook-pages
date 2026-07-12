@@ -50,6 +50,8 @@ apis:
         url: https://developers.facebook.com/docs/graph-api/webhooks
 
 common:
+  - type: Authentication
+    url: authentication/facebook-pages-authentication.yml
   - type: OAuthScopes
     url: scopes/facebook-pages-scopes.yml
   - type: Website

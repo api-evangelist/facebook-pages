@@ -1,0 +1,22 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/facebook-pages-openapi.yml
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - authorizationCode
+schemes:
+- name: PageAccessToken
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://www.facebook.com/v22.0/dialog/oauth
+    tokenUrl: https://graph.facebook.com/v22.0/oauth/access_token
+    scopes: 7
+  description: |-
+    OAuth 2.0 Page access token. Granted scopes determine which
+    endpoints can be called. Send as a Bearer token or as the
+    access_token query parameter.
+  sources:
+  - openapi/facebook-pages-openapi.yml
