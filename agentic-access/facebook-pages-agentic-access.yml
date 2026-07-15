@@ -1,0 +1,328 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/facebook-pages-openapi.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 18
+  by_action_class:
+    connected: 11
+    acting: 7
+  by_consequence:
+    read: 11
+    write: 7
+  human_in_the_loop_required: 0
+operations:
+- path: /{page-id}
+  method: get
+  operationId: getPage
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}
+  method: post
+  operationId: updatePage
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/feed
+  method: get
+  operationId: listPageFeed
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/feed
+  method: post
+  operationId: publishPost
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/posts
+  method: get
+  operationId: listPagePosts
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/photos
+  method: get
+  operationId: listPagePhotos
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/photos
+  method: post
+  operationId: uploadPagePhoto
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/insights
+  method: get
+  operationId: getPageInsights
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/conversations
+  method: get
+  operationId: listPageConversations
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/tagged
+  method: get
+  operationId: listPageTagged
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/settings
+  method: get
+  operationId: getPageSettings
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/settings
+  method: post
+  operationId: updatePageSetting
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{object-id}/comments
+  method: get
+  operationId: listComments
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{object-id}/comments
+  method: post
+  operationId: createComment
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{comment-id}
+  method: delete
+  operationId: deleteComment
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/subscribed_apps
+  method: get
+  operationId: listSubscribedApps
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /{page-id}/subscribed_apps
+  method: post
+  operationId: subscribePageApp
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
+- path: /me/accounts
+  method: get
+  operationId: listMyPages
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - pages_manage_metadata
+    - pages_manage_posts
+    - pages_read_engagement
+    - pages_show_list
