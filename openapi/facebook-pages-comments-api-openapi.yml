@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: Meta Graph API - Pages Comments API
+  description: 'Graph API endpoints for reading and managing Facebook Pages -
+
+    publishing posts and photos, retrieving Page insights, moderating
+
+    comments, configuring Page metadata, and subscribing to webhook
+
+    events. Authentication uses a Page access token obtained via OAuth
+
+    2.0 with scopes such as pages_manage_posts, pages_read_engagement,
+
+    pages_manage_metadata, pages_messaging, and pages_show_list.
+
+    '
+  version: v22.0
+  contact:
+    name: Meta for Developers
+    url: https://developers.facebook.com/docs/pages-api
+servers:
+- url: https://graph.facebook.com/v22.0
+  description: Meta Graph API
+security:
+- PageAccessToken:
+  - pages_show_list
+  - pages_manage_posts
+  - pages_read_engagement
+  - pages_manage_metadata
+tags:
+- name: Comments
+paths:
+  /{object-id}/comments:
+    parameters:
+    - name: object-id
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Post, photo, or other commentable object ID.
+    get:
+      summary: List comments on an object
+      operationId: listComments
+      parameters:
+      - $ref: '#/components/parameters/Fields'
+      responses:
+        '200':
+          description: Comment collection
+      tags:
+      - Comments
+    post:
+      summary: Post a comment on an object
+      operationId: createComment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                attachment_url:
+                  type: string
+                  format: uri
+      responses:
+        '200':
+          description: Comment created
+      tags:
+      - Comments
+components:
+  parameters:
+    Fields:
+      name: fields
+      in: query
+      schema:
+        type: string
+      description: Comma-separated list of fields to return.
+  securitySchemes:
+    PageAccessToken:
+      type: oauth2
+      description: 'OAuth 2.0 Page access token. Granted scopes determine which
+
+        endpoints can be called. Send as a Bearer token or as the
+
+        access_token query parameter.
+
+        '
+      flows:
+        authorizationCode:
+          authorizationUrl: https://www.facebook.com/v22.0/dialog/oauth
+          tokenUrl: https://graph.facebook.com/v22.0/oauth/access_token
+          scopes:
+            pages_show_list: List Pages the user manages
+            pages_manage_posts: Publish and edit posts
+            pages_read_engagement: Read Page content and engagement
+            pages_manage_metadata: Manage Page settings and subscribed apps
+            pages_messaging: Send and receive Messenger messages
+            pages_read_user_content: Read user-generated content on a Page
+            pages_manage_engagement: Moderate comments and reactions
