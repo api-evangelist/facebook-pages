@@ -8,7 +8,19 @@ description: >-
   tokens with permission scopes such as pages_manage_posts, pages_read_engagement,
   and pages_messaging.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/facebook-pages.png
 tags:
   - Social Media
   - Facebook
@@ -22,33 +34,142 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: facebook-pages:graph-pages-api
-    name: Meta Graph API - Pages
-    description: >-
-      Graph API endpoints for reading and managing Facebook Pages, including
-      publishing posts and stories, retrieving Page insights, managing
-      comments and conversations, and configuring Page metadata. Authenticated
-      via OAuth 2.0 Page access tokens scoped to specific Page permissions.
-    humanURL: https://developers.facebook.com/docs/pages-api
-    baseURL: https://graph.facebook.com
-    tags:
-      - Social Media
-      - Facebook
-      - Pages
-      - Content Publishing
-      - Webhooks
-    properties:
-      - type: Documentation
-        url: https://developers.facebook.com/docs/pages-api
-      - type: GettingStarted
-        url: https://developers.facebook.com/docs/pages-api/getting-started
-      - type: Authentication
-        url: https://developers.facebook.com/docs/facebook-login/guides/access-tokens/get-page
-      - type: Permissions
-        url: https://developers.facebook.com/docs/permissions
-      - type: Webhooks
-        url: https://developers.facebook.com/docs/graph-api/webhooks
-
+- aid: facebook-pages:graph-pages-api
+  name: Meta Graph API - Pages
+  description: >-
+    Graph API endpoints for reading and managing Facebook Pages, including publishing posts and stories,
+    retrieving Page insights, managing comments and conversations, and configuring Page metadata. Authenticated
+    via OAuth 2.0 Page access tokens scoped to specific Page permissions.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Social Media
+  - Facebook
+  - Pages
+  - Content Publishing
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://developers.facebook.com/docs/pages-api
+  - type: GettingStarted
+    url: https://developers.facebook.com/docs/pages-api/getting-started
+  - type: Authentication
+    url: https://developers.facebook.com/docs/facebook-login/guides/access-tokens/get-page
+  - type: Permissions
+    url: https://developers.facebook.com/docs/permissions
+  - type: Webhooks
+    url: https://developers.facebook.com/docs/graph-api/webhooks
+- aid: facebook-pages:facebook-pages-comments-api
+  name: Facebook Pages API Comments API
+  description: The Comments API from Facebook Pages API — 1 operation(s) for comments.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Comments
+  properties:
+  - type: OpenAPI
+    url: openapi/facebook-pages-comments-api-openapi.yml
+- aid: facebook-pages:facebook-pages-conversations-api
+  name: Facebook Pages API Conversations API
+  description: The Conversations API from Facebook Pages API — 1 operation(s) for conversations.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Conversations
+  properties:
+  - type: OpenAPI
+    url: openapi/facebook-pages-conversations-api-openapi.yml
+- aid: facebook-pages:facebook-pages-feed-api
+  name: Facebook Pages API Feed API
+  description: The Feed API from Facebook Pages API — 1 operation(s) for feed.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Feed
+  properties:
+  - type: OpenAPI
+    url: openapi/facebook-pages-feed-api-openapi.yml
+- aid: facebook-pages:facebook-pages-insights-api
+  name: Facebook Pages API Insights API
+  description: The Insights API from Facebook Pages API — 1 operation(s) for insights.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Insights
+  properties:
+  - type: OpenAPI
+    url: openapi/facebook-pages-insights-api-openapi.yml
+- aid: facebook-pages:facebook-pages-me-api
+  name: Facebook Pages API Me API
+  description: The Me API from Facebook Pages API — 1 operation(s) for me.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Me
+  properties:
+  - type: OpenAPI
+    url: openapi/facebook-pages-me-api-openapi.yml
+- aid: facebook-pages:facebook-pages-meta-graph-api-pages-api
+  name: Facebook Pages API Meta Graph API Pages API
+  description: >-
+    The Meta Graph API Pages API from Facebook Pages API — 2 operation(s) for meta graph api pages.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Meta Graph API Pages
+  properties:
+  - type: OpenAPI
+    url: openapi/facebook-pages-meta-graph-api-pages-api-openapi.yml
+- aid: facebook-pages:facebook-pages-photos-api
+  name: Facebook Pages API Photos API
+  description: The Photos API from Facebook Pages API — 1 operation(s) for photos.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Photos
+  properties:
+  - type: OpenAPI
+    url: openapi/facebook-pages-photos-api-openapi.yml
+- aid: facebook-pages:facebook-pages-posts-api
+  name: Facebook Pages API Posts API
+  description: The Posts API from Facebook Pages API — 1 operation(s) for posts.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Posts
+  properties:
+  - type: OpenAPI
+    url: openapi/facebook-pages-posts-api-openapi.yml
+- aid: facebook-pages:facebook-pages-settings-api
+  name: Facebook Pages API Settings API
+  description: The Settings API from Facebook Pages API — 1 operation(s) for settings.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Settings
+  properties:
+  - type: OpenAPI
+    url: openapi/facebook-pages-settings-api-openapi.yml
+- aid: facebook-pages:facebook-pages-subscribed-apps-api
+  name: Facebook Pages API Subscribed Apps API
+  description: The Subscribed Apps API from Facebook Pages API — 1 operation(s) for subscribed apps.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Subscribed Apps
+  properties:
+  - type: OpenAPI
+    url: openapi/facebook-pages-subscribed-apps-api-openapi.yml
+- aid: facebook-pages:facebook-pages-tagged-api
+  name: Facebook Pages API Tagged API
+  description: The Tagged API from Facebook Pages API — 1 operation(s) for tagged.
+  humanURL: https://developers.facebook.com/docs/pages-api
+  baseURL: https://graph.facebook.com
+  tags:
+  - Tagged
+  properties:
+  - type: OpenAPI
+    url: openapi/facebook-pages-tagged-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/facebook-pages-agentic-access.yml
