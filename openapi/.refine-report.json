@@ -1,0 +1,34 @@
+{
+  "provider": "facebook-pages",
+  "sources": [
+    "facebook-pages-comments-api-openapi.yml",
+    "facebook-pages-conversations-api-openapi.yml",
+    "facebook-pages-feed-api-openapi.yml",
+    "facebook-pages-insights-api-openapi.yml",
+    "facebook-pages-me-api-openapi.yml",
+    "facebook-pages-meta-graph-api-pages-api-openapi.yml",
+    "facebook-pages-photos-api-openapi.yml",
+    "facebook-pages-posts-api-openapi.yml",
+    "facebook-pages-settings-api-openapi.yml",
+    "facebook-pages-subscribed-apps-api-openapi.yml",
+    "facebook-pages-tagged-api-openapi.yml"
+  ],
+  "outputs": [
+    "facebook-pages-comments-api-openapi.yml",
+    "facebook-pages-conversations-api-openapi.yml",
+    "facebook-pages-feed-api-openapi.yml",
+    "facebook-pages-insights-api-openapi.yml",
+    "facebook-pages-me-api-openapi.yml",
+    "facebook-pages-meta-graph-api-pages-api-openapi.yml",
+    "facebook-pages-photos-api-openapi.yml",
+    "facebook-pages-posts-api-openapi.yml",
+    "facebook-pages-settings-api-openapi.yml",
+    "facebook-pages-subscribed-apps-api-openapi.yml",
+    "facebook-pages-tagged-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
