@@ -1,0 +1,158 @@
+{
+  "item": [
+    {
+      "id": "00135978-f2d7-496f-a083-69acd2cc4511",
+      "name": "Posts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "74b0458f-2596-4c6f-a1db-bbf31291280f",
+          "name": "List posts published by the Page",
+          "request": {
+            "name": "List posts published by the Page",
+            "description": {},
+            "url": {
+              "path": [
+                ":page-id",
+                "posts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>",
+                  "description": "Comma-separated list of fields to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "25",
+                  "description": "Number of items per page."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "page-id",
+                  "description": "(Required) Facebook Page ID"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dedfd6f9-7e23-4ed3-911c-9a52d257636a",
+              "name": "Posts collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":page-id",
+                    "posts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "25"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "page-id",
+                      "description": "(Required) Facebook Page ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://graph.facebook.com/v22.0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "pages_show_list pages_manage_posts pages_read_engagement pages_manage_metadata pages_messaging pages_read_user_content pages_manage_engagement"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://graph.facebook.com/v22.0/oauth/access_token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://www.facebook.com/v22.0/dialog/oauth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "55c6d819-abe1-4a90-b904-a7e0e6ab15f5",
+    "name": "Meta Graph API - Pages Comments Posts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Graph API endpoints for reading and managing Facebook Pages -\npublishing posts and photos, retrieving Page insights, moderating\ncomments, configuring Page metadata, and subscribing to webhook\nevents. Authentication uses a Page access token obtained via OAuth\n2.0 with scopes such as pages_manage_posts, pages_read_engagement,\npages_manage_metadata, pages_messaging, and pages_show_list.\n\n\nContact Support:\n Name: Meta for Developers",
+      "type": "text/plain"
+    }
+  }
+}

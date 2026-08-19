@@ -1,0 +1,93 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Meta Graph API - Pages Comments Photos API",
+    "version": "v22.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://www.facebook.com/v22.0/dialog/oauth",
+      "accessTokenUrl": "https://graph.facebook.com/v22.0/oauth/access_token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Photos",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Page photos",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.facebook.com/v22.0/:page-id/photos",
+            "params": [
+              {
+                "name": "page-id",
+                "value": "",
+                "type": "path",
+                "description": "Facebook Page ID"
+              }
+            ]
+          },
+          "docs": "List Page photos"
+        },
+        {
+          "info": {
+            "name": "Upload a Page photo",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://graph.facebook.com/v22.0/:page-id/photos",
+            "params": [
+              {
+                "name": "page-id",
+                "value": "",
+                "type": "path",
+                "description": "Facebook Page ID"
+              }
+            ],
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "source",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "url",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "caption",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "published",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Upload a Page photo"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

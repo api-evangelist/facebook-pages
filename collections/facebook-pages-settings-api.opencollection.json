@@ -1,0 +1,72 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Meta Graph API - Pages Comments Settings API",
+    "version": "v22.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://www.facebook.com/v22.0/dialog/oauth",
+      "accessTokenUrl": "https://graph.facebook.com/v22.0/oauth/access_token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Settings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Page settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.facebook.com/v22.0/:page-id/settings",
+            "params": [
+              {
+                "name": "page-id",
+                "value": "",
+                "type": "path",
+                "description": "Facebook Page ID"
+              }
+            ]
+          },
+          "docs": "Get Page settings"
+        },
+        {
+          "info": {
+            "name": "Update a Page setting",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://graph.facebook.com/v22.0/:page-id/settings",
+            "params": [
+              {
+                "name": "page-id",
+                "value": "",
+                "type": "path",
+                "description": "Facebook Page ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a Page setting"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

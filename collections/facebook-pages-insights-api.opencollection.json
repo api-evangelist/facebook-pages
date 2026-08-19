@@ -1,0 +1,70 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Meta Graph API - Pages Comments Insights API",
+    "version": "v22.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://www.facebook.com/v22.0/dialog/oauth",
+      "accessTokenUrl": "https://graph.facebook.com/v22.0/oauth/access_token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Insights",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Page insights metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://graph.facebook.com/v22.0/:page-id/insights",
+            "params": [
+              {
+                "name": "page-id",
+                "value": "",
+                "type": "path",
+                "description": "Facebook Page ID"
+              },
+              {
+                "name": "metric",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated metric names, e.g. page_impressions,page_fans"
+              },
+              {
+                "name": "period",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "since",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "until",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get Page insights metrics"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
