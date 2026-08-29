@@ -196,6 +196,9 @@ apis:
   - type: OpenAPI
     url: openapi/facebook-pages-tagged-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/facebook-pages-capability-edges.yml
+    name: Facebook Pages API Business Capability Map
   - type: AgenticAccess
     url: agentic-access/facebook-pages-agentic-access.yml
   - type: Authentication
