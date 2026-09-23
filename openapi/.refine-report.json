@@ -1,17 +1,7 @@
 {
   "provider": "facebook-pages",
   "sources": [
-    "facebook-pages-comments-api-openapi.yml",
-    "facebook-pages-conversations-api-openapi.yml",
-    "facebook-pages-feed-api-openapi.yml",
-    "facebook-pages-insights-api-openapi.yml",
-    "facebook-pages-me-api-openapi.yml",
-    "facebook-pages-meta-graph-api-pages-api-openapi.yml",
-    "facebook-pages-photos-api-openapi.yml",
-    "facebook-pages-posts-api-openapi.yml",
-    "facebook-pages-settings-api-openapi.yml",
-    "facebook-pages-subscribed-apps-api-openapi.yml",
-    "facebook-pages-tagged-api-openapi.yml"
+    "_original/facebook-pages-openapi.yml"
   ],
   "outputs": [
     "facebook-pages-comments-api-openapi.yml",
@@ -29,6 +19,51 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "facebook-pages-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "facebook-pages-openapi.yml: tagged paths GET /{page-id} -> Meta Graph API Pages",
+    "facebook-pages-openapi.yml: tagged paths POST /{page-id} -> Meta Graph API Pages",
+    "facebook-pages-openapi.yml: tagged paths GET /{page-id}/feed -> Feed",
+    "facebook-pages-openapi.yml: tagged paths POST /{page-id}/feed -> Feed",
+    "facebook-pages-openapi.yml: tagged paths GET /{page-id}/posts -> Posts",
+    "facebook-pages-openapi.yml: tagged paths GET /{page-id}/photos -> Photos",
+    "facebook-pages-openapi.yml: tagged paths POST /{page-id}/photos -> Photos",
+    "facebook-pages-openapi.yml: tagged paths GET /{page-id}/insights -> Insights",
+    "facebook-pages-openapi.yml: tagged paths GET /{page-id}/conversations -> Conversations",
+    "facebook-pages-openapi.yml: tagged paths GET /{page-id}/tagged -> Tagged",
+    "facebook-pages-openapi.yml: tagged paths GET /{page-id}/settings -> Settings",
+    "facebook-pages-openapi.yml: tagged paths POST /{page-id}/settings -> Settings",
+    "facebook-pages-openapi.yml: tagged paths GET /{object-id}/comments -> Comments",
+    "facebook-pages-openapi.yml: tagged paths POST /{object-id}/comments -> Comments",
+    "facebook-pages-openapi.yml: tagged paths DELETE /{comment-id} -> Meta Graph API Pages",
+    "facebook-pages-openapi.yml: tagged paths GET /{page-id}/subscribed_apps -> Subscribed Apps",
+    "facebook-pages-openapi.yml: tagged paths POST /{page-id}/subscribed_apps -> Subscribed Apps",
+    "facebook-pages-openapi.yml: tagged paths GET /me/accounts -> Me",
+    "facebook-pages-openapi.yml: declared missing tag: Comments",
+    "facebook-pages-openapi.yml: declared missing tag: Conversations",
+    "facebook-pages-openapi.yml: declared missing tag: Feed",
+    "facebook-pages-openapi.yml: declared missing tag: Insights",
+    "facebook-pages-openapi.yml: declared missing tag: Me",
+    "facebook-pages-openapi.yml: declared missing tag: Meta Graph API Pages",
+    "facebook-pages-openapi.yml: declared missing tag: Photos",
+    "facebook-pages-openapi.yml: declared missing tag: Posts",
+    "facebook-pages-openapi.yml: declared missing tag: Settings",
+    "facebook-pages-openapi.yml: declared missing tag: Subscribed Apps",
+    "facebook-pages-openapi.yml: declared missing tag: Tagged",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "facebook-pages-comments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "facebook-pages-conversations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "facebook-pages-feed-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "facebook-pages-insights-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "facebook-pages-me-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "facebook-pages-meta-graph-api-pages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "facebook-pages-photos-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "facebook-pages-posts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "facebook-pages-settings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "facebook-pages-subscribed-apps-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "facebook-pages-tagged-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Meta Graph API - Pages Comments Feed API
+  title: Meta Graph API - Pages Feed API
   description: 'Graph API endpoints for reading and managing Facebook Pages -
 
     publishing posts and photos, retrieving Page insights, moderating
@@ -11,9 +11,7 @@ info:
 
     2.0 with scopes such as pages_manage_posts, pages_read_engagement,
 
-    pages_manage_metadata, pages_messaging, and pages_show_list.
-
-    '
+    pages_manage_metadata, pages_messaging, and pages_show_list.'
   version: v22.0
   contact:
     name: Meta for Developers
@@ -80,6 +78,27 @@ paths:
       tags:
       - Feed
 components:
+  parameters:
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        default: 25
+      description: Number of items per page.
+    PageId:
+      name: page-id
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Facebook Page ID
+    Fields:
+      name: fields
+      in: query
+      schema:
+        type: string
+      description: Comma-separated list of fields to return.
   schemas:
     GraphCollection:
       type: object
@@ -102,27 +121,6 @@ components:
               type: string
             previous:
               type: string
-  parameters:
-    PageId:
-      name: page-id
-      in: path
-      required: true
-      schema:
-        type: string
-      description: Facebook Page ID
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
-        default: 25
-      description: Number of items per page.
-    Fields:
-      name: fields
-      in: query
-      schema:
-        type: string
-      description: Comma-separated list of fields to return.
   securitySchemes:
     PageAccessToken:
       type: oauth2

@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Meta Graph API - Pages Comments Insights API
+  title: Meta Graph API - Pages Insights API
   description: 'Graph API endpoints for reading and managing Facebook Pages -
 
     publishing posts and photos, retrieving Page insights, moderating
@@ -11,9 +11,7 @@ info:
 
     2.0 with scopes such as pages_manage_posts, pages_read_engagement,
 
-    pages_manage_metadata, pages_messaging, and pages_show_list.
-
-    '
+    pages_manage_metadata, pages_messaging, and pages_show_list.'
   version: v22.0
   contact:
     name: Meta for Developers
