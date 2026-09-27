@@ -34,7 +34,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/facebook-pages.png
 tags:
-  - Social-Media
+  - Social Media
   - Facebook
   - Meta Graph API
   - Pages
@@ -47,6 +47,7 @@ tags_raw:
   - Pages
   - Content Publishing
   - Social Insights
+  - Social-Media
 url: >-
   https://raw.githubusercontent.com/api-evangelist/facebook-pages/refs/heads/main/apis.yml
 created: '2026-05-11'
@@ -62,7 +63,7 @@ apis:
   humanURL: https://developers.facebook.com/docs/pages-api
   baseURL: https://graph.facebook.com
   tags:
-  - Social-Media
+  - Social Media
   - Facebook
   - Pages
   - Content Publishing
@@ -73,6 +74,7 @@ apis:
   - Pages
   - Content Publishing
   - Webhooks
+  - Social-Media
   properties:
   - type: Documentation
     url: https://developers.facebook.com/docs/pages-api

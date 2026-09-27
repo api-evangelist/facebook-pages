@@ -44,13 +44,12 @@ paths:
       - Posts
 components:
   parameters:
-    Limit:
-      name: limit
+    Fields:
+      name: fields
       in: query
       schema:
-        type: integer
-        default: 25
-      description: Number of items per page.
+        type: string
+      description: Comma-separated list of fields to return.
     PageId:
       name: page-id
       in: path
@@ -58,12 +57,13 @@ components:
       schema:
         type: string
       description: Facebook Page ID
-    Fields:
-      name: fields
+    Limit:
+      name: limit
       in: query
       schema:
-        type: string
-      description: Comma-separated list of fields to return.
+        type: integer
+        default: 25
+      description: Number of items per page.
   securitySchemes:
     PageAccessToken:
       type: oauth2
