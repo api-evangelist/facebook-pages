@@ -78,6 +78,27 @@ paths:
       tags:
       - Feed
 components:
+  parameters:
+    Fields:
+      name: fields
+      in: query
+      schema:
+        type: string
+      description: Comma-separated list of fields to return.
+    PageId:
+      name: page-id
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Facebook Page ID
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        default: 25
+      description: Number of items per page.
   schemas:
     GraphCollection:
       type: object
@@ -100,27 +121,6 @@ components:
               type: string
             previous:
               type: string
-  parameters:
-    Fields:
-      name: fields
-      in: query
-      schema:
-        type: string
-      description: Comma-separated list of fields to return.
-    PageId:
-      name: page-id
-      in: path
-      required: true
-      schema:
-        type: string
-      description: Facebook Page ID
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
-        default: 25
-      description: Number of items per page.
   securitySchemes:
     PageAccessToken:
       type: oauth2

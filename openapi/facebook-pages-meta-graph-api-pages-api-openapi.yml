@@ -84,6 +84,20 @@ paths:
       tags:
       - Meta Graph API Pages
 components:
+  parameters:
+    Fields:
+      name: fields
+      in: query
+      schema:
+        type: string
+      description: Comma-separated list of fields to return.
+    PageId:
+      name: page-id
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Facebook Page ID
   schemas:
     Page:
       type: object
@@ -101,20 +115,6 @@ components:
         link:
           type: string
           format: uri
-  parameters:
-    Fields:
-      name: fields
-      in: query
-      schema:
-        type: string
-      description: Comma-separated list of fields to return.
-    PageId:
-      name: page-id
-      in: path
-      required: true
-      schema:
-        type: string
-      description: Facebook Page ID
   securitySchemes:
     PageAccessToken:
       type: oauth2
