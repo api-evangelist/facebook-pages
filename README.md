@@ -1,4 +1,4 @@
-# Facebook Pages API (facebook-pages)
+# Facebook Pages API
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,64 +66,125 @@
 
 The Facebook Pages API is part of the Meta Graph API and allows applications to manage Facebook Pages, including posting content, reading insights, moderating comments, managing tabs and settings, and receiving real-time webhook updates for Page events. Access is granted via OAuth 2.0 Page access tokens with permission scopes such as pages_manage_posts, pages_read_engagement, and pages_messaging.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/facebook-pages/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/facebook-pages/refs/heads/main/apis.yml)
+**Areas:** Social Media · Facebook · Meta Graph API · Pages · Content Publishing · Social Insights
 
-## Scope
+## Facebook Pages API on APIs.io
 
-- **Type:** Index
+Everything profiled for Facebook Pages API is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/facebook-pages/](https://apis.io/providers/facebook-pages/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (12)
 
-- Social Media
-- Facebook
-- Meta Graph API
-- Pages
-- Content Publishing
-- Social Insights
+- [Meta Graph API - Pages](https://apis.io/apis/facebook-pages/graph-pages-api/) — Graph API endpoints for reading and managing Facebook Pages, including publishing posts and stories, retrieving Page insights, managing comments and…
+- [Facebook Pages API Comments API](https://apis.io/apis/facebook-pages/facebook-pages-comments-api/) — The Comments API from Facebook Pages API — 1 operation(s) for comments.
+- [Facebook Pages API Conversations API](https://apis.io/apis/facebook-pages/facebook-pages-conversations-api/) — The Conversations API from Facebook Pages API — 1 operation(s) for conversations.
+- [Facebook Pages API Feed API](https://apis.io/apis/facebook-pages/facebook-pages-feed-api/) — The Feed API from Facebook Pages API — 1 operation(s) for feed.
+- [Facebook Pages API Insights API](https://apis.io/apis/facebook-pages/facebook-pages-insights-api/) — The Insights API from Facebook Pages API — 1 operation(s) for insights.
+- [Facebook Pages API Me API](https://apis.io/apis/facebook-pages/facebook-pages-me-api/) — The Me API from Facebook Pages API — 1 operation(s) for me.
+- [Facebook Pages API Meta Graph API Pages API](https://apis.io/apis/facebook-pages/facebook-pages-meta-graph-api-pages-api/) — The Meta Graph API Pages API from Facebook Pages API — 2 operation(s) for meta graph api pages.
+- [Facebook Pages API Photos API](https://apis.io/apis/facebook-pages/facebook-pages-photos-api/) — The Photos API from Facebook Pages API — 1 operation(s) for photos.
+- [Facebook Pages API Posts API](https://apis.io/apis/facebook-pages/facebook-pages-posts-api/) — The Posts API from Facebook Pages API — 1 operation(s) for posts.
+- [Facebook Pages API Settings API](https://apis.io/apis/facebook-pages/facebook-pages-settings-api/) — The Settings API from Facebook Pages API — 1 operation(s) for settings.
+- [Facebook Pages API Subscribed Apps API](https://apis.io/apis/facebook-pages/facebook-pages-subscribed-apps-api/) — The Subscribed Apps API from Facebook Pages API — 1 operation(s) for subscribed apps.
+- [Facebook Pages API Tagged API](https://apis.io/apis/facebook-pages/facebook-pages-tagged-api/) — The Tagged API from Facebook Pages API — 1 operation(s) for tagged.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Meta Graph API - Pages
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Graph API endpoints for reading and managing Facebook Pages, including publishing posts and stories, retrieving Page insights, managing comments and conversations, and configuring Page metadata. Authenticated via OAuth 2.0 Page access tokens scoped to specific Page permissions.
+- [Facebook Pages Agentic Access](https://apis.io/agentic-access/facebook-pages/facebook-pages-agentic-access/)
 
-- **Human URL:** [https://developers.facebook.com/docs/pages-api](https://developers.facebook.com/docs/pages-api)
-- **Base URL:** `https://graph.facebook.com`
+#### Collections (12)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Social Media
-- Facebook
-- Pages
-- Content Publishing
-- Webhooks
+- [Meta Graph API - Pages](https://apis.io/collections/facebook-pages/open-facebook-pages/)
+- [Meta Graph API - Pages Comments API](https://apis.io/collections/facebook-pages/open-facebook-pages-comments-api/)
+- [Meta Graph API - Pages Comments Conversations API](https://apis.io/collections/facebook-pages/open-facebook-pages-conversations-api/)
+- [Meta Graph API - Pages Comments Feed API](https://apis.io/collections/facebook-pages/open-facebook-pages-feed-api/)
+- [Meta Graph API - Pages Comments Insights API](https://apis.io/collections/facebook-pages/open-facebook-pages-insights-api/)
+- [Meta Graph API - Pages Comments Me API](https://apis.io/collections/facebook-pages/open-facebook-pages-me-api/)
+- [Meta Graph API - Pages Comments Meta Graph API Pages API](https://apis.io/collections/facebook-pages/open-facebook-pages-meta-graph-api-pages-api/)
+- [Meta Graph API - Pages Comments Photos API](https://apis.io/collections/facebook-pages/open-facebook-pages-photos-api/)
+- [Meta Graph API - Pages Comments Posts API](https://apis.io/collections/facebook-pages/open-facebook-pages-posts-api/)
+- [Meta Graph API - Pages Comments Settings API](https://apis.io/collections/facebook-pages/open-facebook-pages-settings-api/)
+- [Meta Graph API - Pages Comments Subscribed Apps API](https://apis.io/collections/facebook-pages/open-facebook-pages-subscribed-apps-api/)
+- [Meta Graph API - Pages Comments Tagged API](https://apis.io/collections/facebook-pages/open-facebook-pages-tagged-api/)
 
-#### Properties
+#### Security (1)
 
-- [Documentation](https://developers.facebook.com/docs/pages-api)
-- [Getting Started](https://developers.facebook.com/docs/pages-api/getting-started)
-- [Authentication](https://developers.facebook.com/docs/facebook-login/guides/access-tokens/get-page)
-- [Permissions](https://developers.facebook.com/docs/permissions)
-- [Webhooks](https://developers.facebook.com/docs/graph-api/webhooks)
-- [Postman Collection](collections/facebook-pages.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/facebook-pages.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Facebook Pages Authentication](https://apis.io/security/facebook-pages/facebook-pages-authentication/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Facebook Pages Scopes](https://apis.io/scopes/facebook-pages/facebook-pages-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://developers.facebook.com)
 - [Documentation](https://developers.facebook.com/docs/pages-api)
 - [Pricing](https://developers.facebook.com/docs/graph-api/overview/rate-limiting)
-- [Sign Up](https://developers.facebook.com/async/registration)
-- [App  Dashboard](https://developers.facebook.com/apps)
 - [Support](https://developers.facebook.com/support)
-- [L L Ms Txt](https://developers.facebook.com/llms.txt)
+- [Blog](https://developers.facebook.com/blog/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.4** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 44.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 23.7 |
+
+**Agent readiness 26.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | unknown |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/facebook-pages/](https://apis.io/providers/facebook-pages/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Facebook Pages API: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/facebook-pages/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
